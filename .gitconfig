@@ -3,3 +3,5 @@
 	name = Jamie Cansdale
 [include]
     path = ~/.gitconfig.aliases
+[credential]
+	helper = store
