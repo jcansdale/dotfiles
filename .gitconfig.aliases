@@ -3,5 +3,6 @@
   b = branch
   co = checkout
   ec = config --global -e # edit config
-  ea = !$(git config core.editor) ~/.gitconfig.aliases 
+  ea = !$(git config core.editor) ~/.gitconfig.aliases
   lg = log --oneline
+  edit = "!f() { $(git config core.editor) -- $@; }; f" # edit files
