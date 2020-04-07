@@ -1,0 +1,5 @@
+[user]
+	email = jcansdale@gmail.com
+	name = Jamie Cansdale
+[include]
+    path = ~/.gitconfig.aliases

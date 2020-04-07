@@ -1,0 +1,5 @@
+[alias]
+  s = status
+  b = branch
+  co = checkout
+  
