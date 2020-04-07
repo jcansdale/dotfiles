@@ -3,3 +3,4 @@
   b = branch
   co = checkout
   ec = config --global -e # edit config
+  lg = log --oneline
