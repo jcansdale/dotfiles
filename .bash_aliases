@@ -1,2 +1,2 @@
-alias config='/usr/bin/git --git-dir=$HOME/jamie/.cfg/ --work-tree=$HOME/jamie'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias hello-world='echo Hello, World!'
