@@ -5,7 +5,7 @@ https://www.atlassian.com/git/tutorials/dotfiles
 
 - Bootstrap
 ```
-curl -Lks https://raw.githubusercontent.com/jcansdale/dotfiles-test/master/install.sh | /bin/bash
+curl -Lks https://raw.githubusercontent.com/jcansdale/dotfiles/master/install.sh | /bin/bash
 ```
 
 - config
