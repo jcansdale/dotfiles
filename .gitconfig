@@ -1,9 +1,0 @@
-[user]
-	email = jcansdale@gmail.com
-	name = Jamie Cansdale
-[include]
-    path = ~/.gitconfig.aliases
-[credential]
-	helper = store
-[core]
-	editor = code --wait
