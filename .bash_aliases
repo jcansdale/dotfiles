@@ -26,6 +26,9 @@ case $(uname) in
 
     # Display a long-format directory listing
     alias ll='ls -l -G'
+
+    # Display color directory listing
+    alias l='ls -G'
    ;;
    *)
     # Display all directory entries that begin with a dot
@@ -33,6 +36,9 @@ case $(uname) in
 
     # Display a long-format directory listing
     alias ll='ls -l --color=auto'
+
+    # Display color directory listing
+    alias ll='ls --color=auto'
    ;;
 esac
 
