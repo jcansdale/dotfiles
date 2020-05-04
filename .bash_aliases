@@ -1,6 +1,10 @@
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias hello-world='echo Hello, World!'
 
+# Install go envvars
+export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin
+
 # Install git aliases
 git config --global include.path "~/.gitconfig_aliases"
 
