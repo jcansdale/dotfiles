@@ -5,6 +5,8 @@ alias hello-world='echo Hello, World!'
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
 
+export GITPATH=~/git
+
 # Install git aliases
 git config --global include.path "~/.gitconfig_aliases"
 
