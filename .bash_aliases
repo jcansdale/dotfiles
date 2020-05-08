@@ -50,3 +50,6 @@ esac
 
 # Alias code-insiders to code if code doesn't exist
 if [[ $(which code-insiders) && ! $(which code) ]]; then alias code=code-insiders; fi
+
+# Alias code-oss to code if code doesn't exist
+if [[ $(which code-oss) && ! $(which code) ]]; then alias code=code-oss; fi
