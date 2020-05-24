@@ -2,7 +2,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias hello-world='echo Hello, World!'
 
 # Bootstrap run.sh for ghvs tool
-alias ghvs="curl -Lks https://raw.githubusercontent.com/jcansdale/ghvs/master/run.sh | /bin/bash /dev/stdin"
+alias ghvs='source <(curl -Lks https://raw.githubusercontent.com/jcansdale/ghvs/master/run.sh)'
 
 # Install go envvars
 export GOPATH=~/go
