@@ -2,7 +2,16 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias hello-world='echo Hello, World!'
 
 # Bootstrap run.sh for ghvs tool
-alias ghvs='source <(curl -Lks https://raw.githubusercontent.com/jcansdale/ghvs/master/run.sh)'
+case $(uname) in
+   Darwin)
+    # On MacOS `source` fails with "(23) Failed writing body when"
+    alias ghvs='bash <(curl -Lks https://raw.githubusercontent.com/jcansdale/ghvs/master/run.sh)'
+   ;;
+   Linux)
+    # DOTNET_ROOT and PATH might not be configured on Codespaces (using `. <(curl` allows us to persist them)
+    alias ghvs='. <(curl -Lks https://raw.githubusercontent.com/jcansdale/ghvs/master/run.sh)'
+   ;;
+esac
 
 # Install go envvars
 export GOPATH=~/go
