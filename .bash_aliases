@@ -13,6 +13,9 @@ case $(uname) in
    ;;
 esac
 
+# GitHub Packages PAT for `jcansdale-robot` with `read:packages` scope
+export READ_PACKAGES_TOKEN=$(base64 --decode <<< MzQ4ZjU3NmFkMGM1ODcxZDY1YzgzNzk5MzdlZjRlZTg2OGRiZmZlYwo=)
+
 # Install go envvars
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
