@@ -6,7 +6,7 @@
   ea = !$(git config core.editor) ~/.gitconfig.aliases
   lg = log --oneline
   edit = "!f() { $(git config core.editor) -- $@; }; f" # edit files
-  main = "!remote=origin; git remote set-head $remote --auto; remote_ref=refs/remotes/$remote/; head=$(git symbolic-ref ${remote_ref}HEAD); heads=refs/heads/; git symbolic-ref refs/heads/_ ${head/$remote_ref/$heads}; git branch --list _"
+  main = "!remote=origin; git remote set-head $remote --auto; remote_head=$(git symbolic-ref refs/remotes/$remote/HEAD); local_head=$(echo $remote_head | sed s/refs\\\\/remotes\\\\/$remote\\\\//refs\\\\/heads\\\\//); git symbolic-ref refs/heads/_ $local_head; git branch --list _"
 
   # wip: create _ alias for HEAD from specified remote
   head = "git main remote set-head $1 --auto; git branch --track @$1 refs/remotes/$1/HEAD; git symbolic-ref refs/heads/_ refs/heads/@$1; git branch --list _"
