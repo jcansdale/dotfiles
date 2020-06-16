@@ -11,4 +11,4 @@
   main = "!remote=origin; git remote set-head $remote --auto; remote_head=$(git symbolic-ref refs/remotes/$remote/HEAD); local_head=$(echo $remote_head | sed s/refs\\\\/remotes\\\\/$remote\\\\//refs\\\\/heads\\\\//); git symbolic-ref refs/heads/_ $local_head; git branch --list _"
 
   # add an upstream remote and branch called _ tracking its default branch
-  upstream="!git remote add upstream $1; git fetch upstream --quiet; git remote set-head upstream --auto; git branch --track _ refs/remotes/upstream/HEAD --force; git branch --list _ -vv"
+  upstream="!if [[ $1 ]]; then REMOTE=upstream; git remote add $REMOTE $1; else REMOTE=origin; fi; git fetch upstream --quiet; git remote set-head $REMOTE --auto; git branch --track _ refs/remotes/$REMOTE/HEAD --force; git branch --list _ -vv"
